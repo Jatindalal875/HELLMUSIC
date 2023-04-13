@@ -1,9 +1,12 @@
-.env 
- *.log 
- venv/ 
- .idea/ 
- *.session 
- raw_files/ 
- downloads/ 
- __pycache__/ 
- *.session-journal
+.evn
+*.log
+.git/
+.idea/
+str.py
+Procfile
+README.md
+downloads/
+raw_files/
+.gitignore
+runtime.txt
+_ _Pycache_ _/
