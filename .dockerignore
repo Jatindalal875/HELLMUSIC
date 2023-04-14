@@ -7,6 +7,3 @@ Procfile
 README.md
 downloads/
 raw_files/
-.gitignore
-runtime.txt
-_ _Pycache_ _/
