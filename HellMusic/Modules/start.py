@@ -93,8 +93,8 @@ async def Hell_st(_, message: Message):
     else:
         await message.reply_photo(
             photo=config.START_IMG,
-            caption=START_TEXT.format(
-                message.from_user.first_name,
+            caption=.format(
+                .from_user.first_name,
                 BOT_MENTION,
                 message.chat.title,
                 config.SUPPORT_CHAT,
