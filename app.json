@@ -1,11 +1,11 @@
 {
-    "name": "Hell Music bot ",
+    "name": "нєℓℓ ダ мυѕι¢",
     "description": "A VC Player Bot for telegram videochats, written in Python with Pyrogram and Py-Tgcalls.",
-    "logo": "https://te.legra.ph/file/de392b9c3d631a1c54142.jpg",
+    "logo": "https://graph.org/file/bd72db7afa8a08a916d49.jpg",
     "keywords": [
     "python3",
     "telegram",
-    "Hell",
+    "Fallen",
     "MusicBot",
     "telegram-bot",
     "pyrogram"
@@ -28,11 +28,11 @@
       },
       "OWNER_ID": {
         "description": "Fill your user id here. (Must be integer)",
-        "value": "1864894033",
+        "value": "5388906652",
         "required": true
       },
       "SESSION": {
-        "description": "A pyrogram string session ",
+        "description": "A pyrogram v2 string session from @StringFatherBot",
         "value": "",
         "required": true
       },
