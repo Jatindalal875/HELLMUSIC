@@ -20,7 +20,7 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 # SOFTWARE.
 
-from FallenMusic import BOT_NAME
+from HellMusic import BOT_NAME
 
 PM_START_TEXT = """
 нєℓℓσ {0}, 🥰
