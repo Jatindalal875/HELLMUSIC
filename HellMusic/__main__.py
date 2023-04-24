@@ -1,6 +1,6 @@
 # MIT License
 #
-# Copyright (c) 2023 MrProgrammer72
+# Copyright (c) 2023 HELL-BOY-OP
 #
 # Permission is hereby granted, free of charge, to any person obtaining a copy
 # of this software and associated documentation files (the "Software"), to deal
@@ -42,7 +42,7 @@ from HellMusic import (
 from HellMusic.Modules import ALL_MODULES
 
 
-async def Hell_startup():
+async def hell_startup():
     LOGGER.info("[•] Loading Modules...")
     for module in ALL_MODULES:
         importlib.import_module("HellMusic.Modules." + module)
@@ -58,7 +58,7 @@ async def Hell_startup():
     try:
         await app.send_message(
             SUNAME,
-            f"✯ ʜᴇʟʟ ᴍᴜsɪᴄ ʙᴏᴛ ✯\n\n𖢵 ɪᴅ : `{BOT_ID}`\n𖢵 ɴᴀᴍᴇ : {BOT_NAME}\n𖢵 ᴜsᴇʀɴᴀᴍᴇ : @{BOT_USERNAME}",
+            f"✯ нєℓℓ мυѕι¢ вσт ✯\n\n𖢵 ι∂ : `{BOT_ID}`\n𖢵 иαмє : {BOT_NAME}\n𖢵 υѕєяиαмє : @{BOT_USERNAME}",
         )
     except:
         LOGGER.error(
@@ -68,7 +68,7 @@ async def Hell_startup():
     try:
         await app2.send_message(
             SUNAME,
-            f"✯ ʜᴇʟʟ ᴍᴜsɪᴄ ᴀss ✯\n\n𖢵 ɪᴅ : `{ASS_ID}`\n𖢵 ɴᴀᴍᴇ : {ASS_NAME}\n𖢵 ᴜsᴇʀɴᴀᴍᴇ : @{ASS_USERNAME}",
+            f"✯ нєℓℓ мυѕι¢ αѕѕ ✯\n\n𖢵 ɪᴅ : `{ASS_ID}`\n𖢵 иαмє : {ASS_NAME}\n𖢵 υѕєяиαмє : @{ASS_USERNAME}",
         )
     except:
         LOGGER.error(
@@ -77,8 +77,8 @@ async def Hell_startup():
 
     await app2.send_message(BOT_USERNAME, "/start")
 
-    LOGGER.info(f"[•] Jay Bot Started As {BOT_NAME}.")
-    LOGGER.info(f"[•] Rishi Assistant Started As {ASS_NAME}.")
+    LOGGER.info(f"[•] Bot Started As {BOT_NAME}.")
+    LOGGER.info(f"[•] Assistant Started As {ASS_NAME}.")
 
     LOGGER.info(
         "[•] \x53\x74\x61\x72\x74\x69\x6e\x67\x20\x50\x79\x54\x67\x43\x61\x6c\x6c\x73\x20\x43\x6c\x69\x65\x6e\x74\x2e\x2e\x2e"
@@ -88,5 +88,5 @@ async def Hell_startup():
 
 
 if __name__ == "__main__":
-    asyncio.get_event_loop().run_until_complete(Hell_startup())
+    asyncio.get_event_loop().run_until_complete(fallen_startup())
     LOGGER.error("Hell Music Bot Stopped.")
