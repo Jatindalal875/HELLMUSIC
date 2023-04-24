@@ -1,6 +1,6 @@
 # MIT License
 #
-# Copyright (c) 2023 MrProgrammer72
+# Copyright (c) 2023 HELL-BOY-OP
 #
 # Permission is hereby granted, free of charge, to any person obtaining a copy
 # of this software and associated documentation files (the "Software"), to deal
@@ -26,7 +26,7 @@ from pyrogram import filters
 from pyrogram.types import Message
 
 from config import OWNER_ID
-from HellMusic import app
+from FallenMusic import app
 
 
 @app.on_message(filters.command(["clearcache", "rmdownloads"]) & filters.user(OWNER_ID))
@@ -46,4 +46,4 @@ async def clear_misc(_, message: Message):
     if os_dir:
         for lel in os.listdir(pth):
             os.system("rm -rf *.webm *.jpg *.png")
-    await message.reply_text("» ᴀʟʟ ᴛᴇᴍᴘ ᴅɪʀᴇᴄᴛᴏʀɪᴇs ᴄʟᴇᴀɴᴇᴅ.")
+    await message.reply_text("» αℓℓ тємρ ∂ιяє¢тσяιєѕ ¢ℓєαиє∂.")

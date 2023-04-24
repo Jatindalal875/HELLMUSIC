@@ -1,6 +1,6 @@
 # MIT License
 #
-# Copyright (c) 2023 MrProgrammer72
+# Copyright (c) 2023 HELL-BOY-OP
 #
 # Permission is hereby granted, free of charge, to any person obtaining a copy
 # of this software and associated documentation files (the "Software"), to deal
@@ -24,7 +24,7 @@ from pyrogram import filters
 from pyrogram.types import Message
 from pytgcalls.types import AudioPiped, HighQualityAudio, Update
 
-from HellMusic import BOT_ID, BOT_USERNAME, app, app2, Helldb, pytgcalls
+from HellMusic import BOT_ID, BOT_USERNAME, app, app2, helldb, pytgcalls
 from HellMusic.Helpers import _clear_, buttons, gen_thumb
 
 welcome = 20
@@ -69,7 +69,7 @@ async def swr_handler(_, chat_id: int):
 async def on_stream_end(pytgcalls, update: Update):
     chat_id = update.chat_id
 
-    get = Helldb.get(chat_id)
+    get = helldb.get(chat_id)
     if not get:
         try:
             await _clear_(chat_id)
@@ -79,7 +79,7 @@ async def on_stream_end(pytgcalls, update: Update):
     else:
         process = await app.send_message(
             chat_id=chat_id,
-            text="» ᴅᴏᴡɴʟᴏᴀᴅɪɴɢ ɴᴇxᴛ ᴛʀᴀᴄᴋ ғʀᴏᴍ ᴏ̨ᴜᴇᴜᴇ...",
+            text="» ∂σωиℓσα∂ιиg иєχт тяα¢кѕ fяσм qυєᴜє...",
         )
         title = get[0]["title"]
         duration = get[0]["duration"]
@@ -105,6 +105,6 @@ async def on_stream_end(pytgcalls, update: Update):
         await app.send_photo(
             chat_id=chat_id,
             photo=img,
-            caption=f"**➻ sᴛᴀʀᴛᴇᴅ sᴛʀᴇᴀᴍɪɴɢ**\n\n‣ **ᴛɪᴛʟᴇ :** [{title[:27]}](https://t.me/{BOT_USERNAME}?start=info_{videoid})\n‣ **ᴅᴜʀᴀᴛɪᴏɴ :** `{duration}` ᴍɪɴᴜᴛᴇs\n‣ **ʀᴇǫᴜᴇsᴛᴇᴅ ʙʏ :** {req_by}",
+            caption=f"**➻ ѕтαятє∂ ѕтяєαмιиg**\n\n‣ **тιтℓє :** [{title[:27]}](https://t.me/{BOT_USERNAME}?start=info_{videoid})\n‣ **∂υяαтισи :** `{duration}` мιиυтєѕ\n‣ **яєqυєѕтє∂ ву :** {req_by}",
             reply_markup=buttons,
         )

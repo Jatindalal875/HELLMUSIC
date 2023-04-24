@@ -1,6 +1,6 @@
 # MIT License
 #
-# Copyright (c) 2023 MrProgrammer72
+# Copyright (c) 2023 HELL-BOY-OP
 #
 # Permission is hereby granted, free of charge, to any person obtaining a copy
 # of this software and associated documentation files (the "Software"), to deal
@@ -41,6 +41,6 @@ async def stop_str(_, message: Message):
         pass
 
     return await message.reply_text(
-        text=f"➻ **sᴛʀᴇᴀᴍ ᴇɴᴅᴇᴅ/sᴛᴏᴩᴩᴇᴅ** ❄\n│ \n└ʙʏ : {message.from_user.mention} 🥀",
+        text=f"➻ **ѕтєαм єи∂є∂/ѕтσρρєf** ❄\n│ \n└ву : {message.from_user.mention} 🥲",
         reply_markup=close_key,
     )

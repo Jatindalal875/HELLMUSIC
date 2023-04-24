@@ -1,6 +1,6 @@
 # MIT License
 #
-# Copyright (c) 2023 MrProgrammer72
+# Copyright (c) 2023 HELL-BOY-OP
 #
 # Permission is hereby granted, free of charge, to any person obtaining a copy
 # of this software and associated documentation files (the "Software"), to deal
@@ -32,13 +32,13 @@ def testspeed(m):
     try:
         test = speedtest.Speedtest()
         test.get_best_server()
-        m = m.edit("**⇆ ʀᴜɴɴɪɴɢ ᴅᴏᴡɴʟᴏᴀᴅ sᴩᴇᴇᴅᴛᴇsᴛ...**")
+        m = m.edit("**⇆ яυииιиg ∂σωиℓσα∂ ѕρє∂∂тєѕт...**")
         test.download()
-        m = m.edit("**⇆ ʀᴜɴɴɪɴɢ ᴜᴩʟᴏᴀᴅ sᴩᴇᴇᴅᴛᴇsᴛ...**")
+        m = m.edit("**⇆ яυииιиg υρℓσα∂ ѕρєє∂тєѕт...**")
         test.upload()
         test.results.share()
         result = test.results.dict()
-        m = m.edit("**↻ sʜᴀʀɪɴɢ sᴩᴇᴇᴅᴛᴇsᴛ ʀᴇsᴜʟᴛs...**")
+        m = m.edit("**↻ ѕнαяιиg ѕρєє∂тєѕт яєѕυℓт...**")
     except Exception as e:
         return m.edit(e)
     return result
@@ -46,21 +46,21 @@ def testspeed(m):
 
 @app.on_message(filters.command(["speedtest", "spt"]) & SUDOERS)
 async def speedtest_function(_, message):
-    m = await message.reply_text("**» ʀᴜɴɴɪɴɢ sᴩᴇᴇᴅᴛᴇsᴛ...**")
+    m = await message.reply_text("**» яυииιиg ѕρєє∂тєѕт...**")
     loop = asyncio.get_event_loop()
     result = await loop.run_in_executor(None, testspeed, m)
-    output = f"""✯ **sᴩᴇᴇᴅᴛᴇsᴛ ʀᴇsᴜʟᴛs** ✯
+    output = f"""✯ **ѕρєє∂ яєѕυℓт** ✯
     
-<u>**❥͜͡ᴄʟɪᴇɴᴛ :**</u>
-**» __ɪsᴩ :__** {result['client']['isp']}
-**» __ᴄᴏᴜɴᴛʀʏ :__** {result['client']['country']}
+<u>**❥͜͡¢ℓιєит :**</u>
+**» __ιѕρ :__** {result['client']['isp']}
+**» __¢συитяу :__** {result['client']['country']}
   
-<u>**❥͜͡sᴇʀᴠᴇʀ :**</u>
-**» __ɴᴀᴍᴇ :__** {result['server']['name']}
-**» __ᴄᴏᴜɴᴛʀʏ :__** {result['server']['country']}, {result['server']['cc']}
-**» __sᴩᴏɴsᴏʀ :__** {result['server']['sponsor']}
-**» __ʟᴀᴛᴇɴᴄʏ :__** {result['server']['latency']}  
-**» __ᴩɪɴɢ :__** {result['ping']}"""
+<u>**❥͜͡ѕєяνєя :**</u>
+**» __иαмє :__** {result['server']['name']}
+**» __¢συитяу :__** {result['server']['country']}, {result['server']['cc']}
+**» __ѕρσиѕσя :__** {result['server']['sponsor']}
+**» __ℓαтєи¢у :__** {result['server']['latency']}  
+**» __ριиg :__** {result['ping']}"""
     msg = await app.send_photo(
         chat_id=message.chat.id, photo=result["share"], caption=output
     )

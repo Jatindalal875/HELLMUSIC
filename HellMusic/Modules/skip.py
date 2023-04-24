@@ -1,6 +1,6 @@
 # MIT License
 #
-# Copyright (c) 2023 MrProgrammer72
+# Copyright (c) 2023 HELL-BOY-OP
 #
 # Permission is hereby granted, free of charge, to any person obtaining a copy
 # of this software and associated documentation files (the "Software"), to deal
@@ -24,7 +24,7 @@ from pyrogram import filters
 from pyrogram.types import Message
 from pytgcalls.types import AudioPiped, HighQualityAudio
 
-from HellMusic import BOT_USERNAME, app, Helldb, pytgcalls
+from HellMusic import BOT_USERNAME, app, helldb, pytgcalls
 from HellMusic.Helpers import _clear_, admin_check, buttons, close_key, gen_thumb
 
 
@@ -35,13 +35,13 @@ async def skip_str(_, message: Message):
         await message.delete()
     except:
         pass
-    get = Helldb.get(message.chat.id)
+    get = fallendb.get(message.chat.id)
     if not get:
         try:
             await _clear_(message.chat.id)
             await pytgcalls.leave_group_call(message.chat.id)
             await message.reply_text(
-                text=f"➻ sᴛʀᴇᴀᴍ sᴋɪᴩᴩᴇᴅ 🥺\n│ \n└ʙʏ : {message.from_user.mention} 🥀\n\n**» ɴᴏ ᴍᴏʀᴇ ǫᴜᴇᴜᴇᴅ ᴛʀᴀᴄᴋs ɪɴ** {message.chat.title}, **ʟᴇᴀᴠɪɴɢ ᴠɪᴅᴇᴏᴄʜᴀᴛ.**",
+                text=f"➻ ѕтєαмѕ ѕкιρρє∂ 🥺\n│ \n└ву : {message.from_user.mention} 🤒\n\n**» мσ мσяє qυєᴜє∂ тяα¢кѕ ιи** {message.chat.title}, **ℓєανιиg νι∂єσ¢нαт.**",
                 reply_markup=close_key,
             )
         except:
@@ -66,12 +66,12 @@ async def skip_str(_, message: Message):
             return await pytgcalls.leave_group_call(message.chat.id)
 
         await message.reply_text(
-            text=f"➻ sᴛʀᴇᴀᴍ sᴋɪᴩᴩᴇᴅ 🥺\n│ \n└ʙʏ : {message.from_user.mention} 🥀",
+            text=f"➻ ѕтяєαм ѕкιρρє∂ 🥺\n│ \n└ву : {message.from_user.mention} 🤒",
             reply_markup=close_key,
         )
         img = await gen_thumb(videoid, user_id)
         return await message.reply_photo(
             photo=img,
-            caption=f"**➻ sᴛᴀʀᴛᴇᴅ sᴛʀᴇᴀᴍɪɴɢ**\n\n‣ **ᴛɪᴛʟᴇ :** [{title[:27]}](https://t.me/{BOT_USERNAME}?start=info_{videoid})\n‣ **ᴅᴜʀᴀᴛɪᴏɴ :** `{duration}` ᴍɪɴᴜᴛᴇs\n‣ **ʀᴇǫᴜᴇsᴛᴇᴅ ʙʏ :** {req_by}",
+            caption=f"**➻ ѕтαятє∂ ѕтяєαмιиg**\n\n‣ **тιтℓє :** [{title[:27]}](https://t.me/{BOT_USERNAME}?start=info_{videoid})\n‣ **∂υяαтισи :** `{duration}` ᴍɪɴᴜᴛᴇs\n‣ **яєqυєѕтє∂ ву :** {req_by}",
             reply_markup=buttons,
         )

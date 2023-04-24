@@ -1,6 +1,6 @@
 # MIT License
 #
-# Copyright (c) 2023 MrProgrammer72
+# Copyright (c) 2023 HELL-BOY-OP
 #
 # Permission is hereby granted, free of charge, to any person obtaining a copy
 # of this software and associated documentation files (the "Software"), to deal
@@ -33,9 +33,9 @@ from HellMusic.Helpers import get_readable_time
 
 
 @app.on_message(filters.command("ping"))
-async def ping_Hell(_, message: Message):
+async def ping_hell(_, message: Message):
     hmm = await message.reply_photo(
-        photo=config.PING_IMG, caption=f"{BOT_NAME} ɪs ᴘɪɴɢɪɴɢ..."
+        photo=config.PING_IMG, caption=f"{BOT_NAME} ιѕ ριиgιиg..."
     )
     upt = int(time.time() - StartTime)
     cpu = psutil.cpu_percent(interval=0.5)
@@ -46,21 +46,21 @@ async def ping_Hell(_, message: Message):
     uptime = get_readable_time((upt))
 
     await hmm.edit_text(
-        f"""➻ ᴩᴏɴɢ : `{resp}ᴍs`
+        f"""➻ ρσиg : `{resp}мѕ`
 
-<b><u>{BOT_NAME} sʏsᴛᴇᴍ sᴛᴀᴛs :</u></b>
+<b><u>{BOT_NAME} ѕуѕтєм ѕтαтѕ :</u></b>
 
-๏ **ᴜᴩᴛɪᴍᴇ :** {uptime}
-๏ **ʀᴀᴍ :** {mem}
-๏ **ᴄᴩᴜ :** {cpu}
-๏ **ᴅɪsᴋ :** {disk}""",
+๏ **υρтιмє :** {uptime}
+๏ **яαм :** {mem}
+๏ **¢ρυ :** {cpu}
+๏ **∂ιѕк :** {disk}""",
         reply_markup=InlineKeyboardMarkup(
             [
                 [
-                    InlineKeyboardButton("❄ sᴜᴘᴘᴏʀᴛ ❄", url=config.SUPPORT_CHAT),
+                    InlineKeyboardButton("❄ ѕυρρσят ❄", url=config.SUPPORT_CHAT),
                     InlineKeyboardButton(
-                        "✨ sᴏᴜʀᴄᴇ ✨",
-                        url="https://github.com/AnonymousX1025/HellMusic",
+                        "✨ ѕσυя¢є ✨",
+                        url="https://graph.org/file/83460f247a582d9349f1f.jpg",
                     ),
                 ],
             ]

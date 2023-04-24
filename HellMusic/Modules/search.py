@@ -1,6 +1,6 @@
 # MIT License
 #
-# Copyright (c) 2023 MrProgrammer72
+# Copyright (c) 2023 HELL-BOY-OP
 #
 # Permission is hereby granted, free of charge, to any person obtaining a copy
 # of this software and associated documentation files (the "Software"), to deal
@@ -35,24 +35,24 @@ async def ytsearch(_, message: Message):
         pass
     try:
         if len(message.command) < 2:
-            return await message.reply_text("» ɢɪᴠᴇ sᴏᴍᴇ ᴛᴇxᴛ ᴛᴏ sᴇᴀʀᴄʜ ʙᴀʙʏ !")
+            return await message.reply_text("» gινє ѕσмє тєχт тσ ѕєαя¢н ѕωєєт нєαят !")
         query = message.text.split(None, 1)[1]
         m = await message.reply_text("🔎")
         results = YoutubeSearch(query, max_results=4).to_dict()
         i = 0
         text = ""
         while i < 4:
-            text += f"✨ ᴛɪᴛʟᴇ : {results[i]['title']}\n"
-            text += f"⏱ ᴅᴜʀᴀᴛɪᴏɴ : `{results[i]['duration']}`\n"
-            text += f"👀 ᴠɪᴇᴡs : `{results[i]['views']}`\n"
-            text += f"📣 ᴄʜᴀɴɴᴇʟ : {results[i]['channel']}\n"
-            text += f"🔗 ʟɪɴᴋ : https://youtube.com{results[i]['url_suffix']}\n\n"
+            text += f"✨ тιтℓє : {results[i]['title']}\n"
+            text += f"⏱ ∂υяαтισи : `{results[i]['duration']}`\n"
+            text += f"👀 νιєωѕ : `{results[i]['views']}`\n"
+            text += f"📣 ¢нαииєℓ : {results[i]['channel']}\n"
+            text += f"🔗 ℓιик : https://youtube.com{results[i]['url_suffix']}\n\n"
             i += 1
         key = InlineKeyboardMarkup(
             [
                 [
                     InlineKeyboardButton(
-                        text="ᴄʟᴏsᴇ",
+                        text="¢ℓσѕє",
                         callback_data=f"forceclose abc|{message.from_user.id}",
                     ),
                 ]

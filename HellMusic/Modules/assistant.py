@@ -1,6 +1,6 @@
 # MIT License
 #
-# Copyright (c) 2023 MrProgrammer72
+# Copyright (c) 2023 HELL-BOY-OP
 #
 # Permission is hereby granted, free of charge, to any person obtaining a copy
 # of this software and associated documentation files (the "Software"), to deal
@@ -29,18 +29,18 @@ from HellMusic import ASS_MENTION, LOGGER, SUDOERS, app, app2
 @app.on_message(filters.command(["asspfp", "setpfp"]) & SUDOERS)
 async def set_pfp(_, message: Message):
     if message.reply_to_message.photo:
-        fuk = await message.reply_text("» ᴄʜᴀɴɢɪɴɢ ᴀssɪsᴛᴀɴᴛ's ᴘʀᴏғɪʟᴇ ᴘɪᴄ...")
+        fuk = await message.reply_text("» ¢нαиgιиg αѕѕιѕтαит ρяσfιℓє ρι¢...")
         img = await message.reply_to_message.download()
         try:
             await app2.set_profile_photo(photo=img)
             return await fuk.edit_text(
-                f"» {ASS_MENTION} ᴘʀᴏғɪʟᴇ ᴘɪᴄ ᴄʜᴀɴɢᴇᴅ sᴜᴄᴄᴇssғᴜʟʟʏ."
+                f"» {ASS_MENTION} ρяσfιℓє ρι¢ ¢нαиgє∂ ѕυ¢¢єѕѕfυℓℓу."
             )
         except:
-            return await fuk.edit_text("» ғᴀɪʟᴇᴅ ᴛᴏ ᴄʜᴀɴɢᴇ ᴀssɪsᴛᴀɴᴛ's ᴘʀᴏғɪʟᴇ ᴘɪᴄ.")
+            return await fuk.edit_text("» fαιℓє∂ тσ ¢нαиgє αѕѕιѕтαит ρяσfιℓє ρι¢.")
     else:
         await message.reply_text(
-            "» ʀᴇᴘʟʏ ᴛᴏ ᴀ ᴘʜᴏᴛᴏ ғᴏʀ ᴄʜᴀɴɢɪɴɢ ᴀssɪsᴛᴀɴᴛ's ᴘʀᴏғɪʟᴇ ᴘɪᴄ."
+            "» яєρℓу тσ α ρнσтσ fσя ¢нαиgιиg αѕѕιѕтαит ρяσfιℓє ρι¢."
         )
 
 
@@ -50,11 +50,11 @@ async def set_pfp(_, message: Message):
         pfp = [p async for p in app2.get_chat_photos("me")]
         await app2.delete_profile_photos(pfp[0].file_id)
         return await message.reply_text(
-            "» sᴜᴄᴄᴇssғᴜʟʟʏ ᴅᴇʟᴇᴛᴇᴅ ᴀssɪsᴛᴀɴᴛ's ᴘʀᴏғɪʟᴇ ᴘɪᴄ."
+            "» ѕυ¢¢єѕѕfυℓℓу ∂єℓєтє∂ αѕѕιѕтαит's ρяσfιℓє ρι¢."
         )
     except Exception as ex:
         LOGGER.error(ex)
-        await message.reply_text("» ғᴀɪʟᴇᴅ ᴛᴏ ᴅᴇʟᴇᴛᴇ ᴀssɪsᴛᴀɴᴛ's ᴘʀᴏғɪʟᴇ ᴘɪᴄ.")
+        await message.reply_text("» fαιℓє∂ тσ ∂єℓєтє αѕѕιѕтαит'ѕ ρяσfιℓє ρι¢.")
 
 
 @app.on_message(filters.command(["assbio", "setbio"]) & SUDOERS)
@@ -65,15 +65,15 @@ async def set_bio(_, message: Message):
             newbio = msg.text
             await app2.update_profile(bio=newbio)
             return await message.reply_text(
-                f"» {ASS_MENTION} ʙɪᴏ ᴄʜᴀɴɢᴇᴅ sᴜᴄᴄᴇssғᴜʟʟʏ."
+                f"» {ASS_MENTION} вισ ¢нαиgє∂ ѕυ¢¢єѕѕfυℓℓу."
             )
     elif len(message.command) != 1:
         newbio = message.text.split(None, 1)[1]
         await app2.update_profile(bio=newbio)
-        return await message.reply_text(f"» {ASS_MENTION} ʙɪᴏ ᴄʜᴀɴɢᴇᴅ sᴜᴄᴄᴇssғᴜʟʟʏ.")
+        return await message.reply_text(f"» {ASS_MENTION} вισ ¢нαиgє∂ ѕυ¢¢єѕѕfυℓℓу.")
     else:
         return await message.reply_text(
-            "» ʀᴇᴘʟʏ ᴛᴏ ᴀ ᴍᴇssᴀɢᴇ ᴏʀ ɢɪᴠᴇ sᴏᴍᴇ ᴛᴇxᴛ ᴛᴏ sᴇᴛ ɪᴛ ᴀs ᴀssɪsᴛᴀɴᴛ's ʙɪᴏ."
+            "» яєρℓу тσ α мєѕѕαgє σя gινє ѕσмє тєχт тσ ѕєт ιт αѕ αѕѕιѕтαит'ѕ вισ."
         )
 
 
@@ -85,13 +85,13 @@ async def set_name(_, message: Message):
             name = msg.text
             await app2.update_profile(first_name=name)
             return await message.reply_text(
-                f"» {ASS_MENTION} ɴᴀᴍᴇ ᴄʜᴀɴɢᴇᴅ sᴜᴄᴄᴇssғᴜʟʟʏ."
+                f"» {ASS_MENTION} иαмє ¢нαиgє∂ ѕυ¢¢єѕѕfυℓℓу."
             )
     elif len(message.command) != 1:
         name = message.text.split(None, 1)[1]
         await app2.update_profile(first_name=name, last_name="")
-        return await message.reply_text(f"» {ASS_MENTION} ɴᴀᴍᴇ ᴄʜᴀɴɢᴇᴅ sᴜᴄᴄᴇssғᴜʟʟʏ.")
+        return await message.reply_text(f"» {ASS_MENTION} иαмє ¢нαмgє∂ ѕυ¢¢єѕѕfυℓℓу.")
     else:
         return await message.reply_text(
-            "» ʀᴇᴘʟʏ ᴛᴏ ᴀ ᴍᴇssᴀɢᴇ ᴏʀ ɢɪᴠᴇ sᴏᴍᴇ ᴛᴇxᴛ ᴛᴏ sᴇᴛ ɪᴛ ᴀs ᴀssɪsᴛᴀɴᴛ's ɴᴇᴡ ɴᴀᴍᴇ."
+            "» яєρℓу тσ α мєѕѕαgє σя gινє ѕσмє тєχт тσ ѕєт ιт αѕ αѕѕιѕтαит иєω иαмє."
         )

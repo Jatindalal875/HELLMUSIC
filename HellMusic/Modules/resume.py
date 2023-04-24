@@ -1,6 +1,6 @@
 # MIT License
 #
-# Copyright (c) 2023 MrProgrammer72
+# Copyright (c) 2023 HELL-BOY-OP
 #
 # Permission is hereby granted, free of charge, to any person obtaining a copy
 # of this software and associated documentation files (the "Software"), to deal
@@ -36,10 +36,10 @@ async def res_str(_, message: Message):
         pass
 
     if await is_streaming(message.chat.id):
-        return await message.reply_text("ᴅɪᴅ ʏᴏᴜ ʀᴇᴍᴇᴍʙᴇʀ ᴛʜᴀᴛ ʏᴏᴜ ᴘᴀᴜsᴇᴅ ᴛʜᴇ sᴛʀᴇᴀᴍ ?")
+        return await message.reply_text("∂ι∂ уσυ яємємвєя тнαт уσυ ραυѕє∂ тнє ѕтяєαм ?")
     await stream_on(message.chat.id)
     await pytgcalls.resume_stream(message.chat.id)
     return await message.reply_text(
-        text=f"➻ sᴛʀᴇᴀᴍ ʀᴇsᴜᴍᴇᴅ 💫\n│ \n└ʙʏ : {message.from_user.mention} 🥀",
+        text=f"➻ ѕтяєαм яєѕυмє∂ 💫\n│ \n└ву : {message.from_user.mention} 🤨",
         reply_markup=close_key,
     )

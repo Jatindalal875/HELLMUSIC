@@ -1,6 +1,6 @@
 # MIT License
 #
-# Copyright (c) 2023 MrProgrammer72
+# Copyright (c) 2023 HELL-BOY-OP
 #
 # Permission is hereby granted, free of charge, to any person obtaining a copy
 # of this software and associated documentation files (the "Software"), to deal
@@ -33,7 +33,7 @@ from HellMusic.Helpers.dossier import *
 
 @app.on_message(filters.command(["start"]) & ~filters.forwarded)
 @app.on_edited_message(filters.command(["start"]) & ~filters.forwarded)
-async def Hell_st(_, message: Message):
+async def fallen_st(_, message: Message):
     if message.chat.type == ChatType.PRIVATE:
         if len(message.text.split()) > 1:
             cmd = message.text.split(None, 1)[1]
@@ -52,23 +52,23 @@ async def Hell_st(_, message: Message):
                     link = result["link"]
                     published = result["publishedTime"]
                 searched_text = f"""
-➻ **ᴛʀᴀᴄᴋ ɪɴғᴏʀɴᴀᴛɪᴏɴ** 
+➻ **тяα¢к ιиfσяиαтισи** 
 
-📌 **ᴛɪᴛʟᴇ :** {title}
+📌 **тιтℓє :** {title}
 
-⏳ **ᴅᴜʀᴀᴛɪᴏɴ :** {duration} ᴍɪɴᴜᴛᴇs
-👀 **ᴠɪᴇᴡs :** `{views}`
-⏰ **ᴩᴜʙʟɪsʜᴇᴅ ᴏɴ :** {published}
-🔗 **ʟɪɴᴋ :** [ᴡᴀᴛᴄʜ ᴏɴ ʏᴏᴜᴛᴜʙᴇ]({link})
+⏳ **∂υяαтισи :** {duration} мιиυтєѕ
+👀 **νιєωѕ :** `{views}`
+⏰ **ρυвℓιѕнє∂ σи :** {published}
+🔗 **ℓιик :** [ᴡᴀᴛᴄʜ ᴏɴ ʏᴏᴜᴛᴜʙᴇ]({link})
 🎥 **ᴄʜᴀɴɴᴇʟ :** [{channel}]({channellink})
 
-💖 sᴇᴀʀᴄʜ ᴩᴏᴡᴇʀᴇᴅ ʙʏ {BOT_NAME}"""
+💖 ѕєαя¢н ρσωєяє∂ ву {BOT_NAME}"""
                 key = InlineKeyboardMarkup(
                     [
                         [
-                            InlineKeyboardButton(text="ʏᴏᴜᴛᴜʙᴇ", url=link),
+                            InlineKeyboardButton(text="уσυтυвє", url=link),
                             InlineKeyboardButton(
-                                text="sᴜᴩᴩᴏʀᴛ", url=config.SUPPORT_CHAT
+                                text="ѕυρρσят", url=config.SUPPORT_CHAT
                             ),
                         ],
                     ]
@@ -93,8 +93,8 @@ async def Hell_st(_, message: Message):
     else:
         await message.reply_photo(
             photo=config.START_IMG,
-            caption=.format(
-                .from_user.first_name,
+            caption=START_TEXT.format(
+                message.from_user.first_name,
                 BOT_MENTION,
                 message.chat.title,
                 config.SUPPORT_CHAT,

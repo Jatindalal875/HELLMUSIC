@@ -1,6 +1,6 @@
 # MIT License
 #
-# Copyright (c) 2023 MrProgrammer72
+# Copyright (c) 2023 HELL-BOY-OP
 #
 # Permission is hereby granted, free of charge, to any person obtaining a copy
 # of this software and associated documentation files (the "Software"), to deal
@@ -39,7 +39,7 @@ from HellMusic.Modules import ALL_MODULES
 @app.on_message(filters.command(["stats", "sysstats"]) & SUDOERS)
 async def sys_stats(_, message: Message):
     sysrep = await message.reply_text(
-        f"ɢᴇᴛᴛɪɴɢ {BOT_NAME} sʏsᴛᴇᴍ sᴛᴀᴛs, ɪᴛ'ʟʟ ᴛᴀᴋᴇ ᴀ ᴡʜɪʟᴇ..."
+        f"gєттιиg {BOT_NAME} ѕуѕтєм ѕтαтѕ, ιт'ℓℓ тαкя α ωнιℓє..."
     )
     try:
         await message.delete()
@@ -59,11 +59,11 @@ async def sys_stats(_, message: Message):
     try:
         cpu_freq = psutil.cpu_freq().current
         if cpu_freq >= 1000:
-            cpu_freq = f"{round(cpu_freq / 1000, 2)}ɢʜᴢ"
+            cpu_freq = f"{round(cpu_freq / 1000, 2)}gнχ"
         else:
-            cpu_freq = f"{round(cpu_freq, 2)}ᴍʜᴢ"
+            cpu_freq = f"{round(cpu_freq, 2)}мнz"
     except:
-        cpu_freq = "ғᴀɪʟᴇᴅ ᴛᴏ ғᴇᴛᴄʜ"
+        cpu_freq = "fαιℓє∂ тσ fєт¢н"
     hdd = psutil.disk_usage("/")
     total = hdd.total / (1024.0**3)
     total = str(total)
@@ -76,32 +76,32 @@ async def sys_stats(_, message: Message):
 
     await sysrep.edit_text(
         f"""
-➻ <u>**{BOT_NAME} sʏsᴛᴇᴍ sᴛᴀᴛs**</u>
+➻ <u>**{BOT_NAME} ѕуѕтєм ѕтѕтѕ**</u>
 
-**ᴩʏᴛʜᴏɴ :** {pyver.split()[0]}
-**ᴩʏʀᴏɢʀᴀᴍ :** {pyrover}
-**ᴩʏ-ᴛɢᴄᴀʟʟs :** {pytgver}
-**sᴜᴅᴏᴇʀs :** `{sudoers}`
-**ᴍᴏᴅᴜʟᴇs :** `{mod}`
+**ρутнσи :** {pyver.split()[0]}
+**ρуяσgяαм :** {pyrover}
+**ρу-тg¢αℓℓѕ :** {pytgver}
+**ѕυ∂σєѕ :** `{sudoers}`
+**мσ∂υℓєѕ :** `{mod}`
 
-**ɪᴘ :** {ip_address}
-**ᴍᴀᴄ :** {mac_address}
-**ʜᴏsᴛɴᴀᴍᴇ :** {hostname}
-**ᴘʟᴀᴛғᴏʀᴍ :** {sp}
-**ᴘʀᴏᴄᴇssᴏʀ :** {processor}
-**ᴀʀᴄʜɪᴛᴇᴄᴛᴜʀᴇ :** {architecture}
-**ᴘʟᴀᴛғᴏʀᴍ ʀᴇʟᴇᴀsᴇ :** {platform_release}
-**ᴘʟᴀᴛғᴏʀᴍ ᴠᴇʀsɪᴏɴ :** {platform_version}
+**ιρ :** {ip_address}
+**мα¢ :** {mac_address}
+**нσѕтиαмє :** {hostname}
+**ρℓѕтfяσм :** {sp}
+**ρяσ¢єѕѕσя :** {processor}
+**αя¢нιтє¢тυяє :** {architecture}
+**ρℓαтfяσм яєαℓєѕ :** {platform_release}
+**ρℓαтfяσм νєяѕισи :** {platform_version}
 
-        <b><u>sᴛᴏʀᴀɢᴇ</b><u/>
-**ᴀᴠᴀɪʟᴀʙʟᴇ :** {total[:4]} ɢɪʙ
-**ᴜsᴇᴅ :** {used[:4]} ɢɪʙ
-**ғʀᴇᴇ :** {free[:4]} ɢɪʙ
+        <b><u>ѕтσяєgє</b><u/>
+**αναιℓαвℓє :** {total[:4]} ɢɪʙ
+**υѕє∂ :** {used[:4]} ɢɪʙ
+**fяєє :** {free[:4]} ɢɪʙ
 
-**ʀᴀᴍ :** {ram}
-**ᴩʜʏsɪᴄᴀʟ ᴄᴏʀᴇs :** {p_core}
-**ᴛᴏᴛᴀʟ ᴄᴏʀᴇs :** {t_core}
-**ᴄᴩᴜ ғʀᴇǫᴜᴇɴᴄʏ :** {cpu_freq}""",
+**яαм :** {ram}
+**ρнуѕι¢αℓ ¢σяєѕ :** {p_core}
+**тσтαℓ ¢σяєѕ :** {t_core}
+**¢ρυ ғʀᴇǫᴜᴇɴᴄʏ :** {cpu_freq}""",
         reply_markup=InlineKeyboardMarkup(
             [
                 [

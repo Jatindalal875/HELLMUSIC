@@ -1,6 +1,6 @@
 # MIT License
 #
-# Copyright (c) 2023 MrProgrammer72
+# Copyright (c) 2023 HELL-BOY-OP
 #
 # Permission is hereby granted, free of charge, to any person obtaining a copy
 # of this software and associated documentation files (the "Software"), to deal
@@ -32,14 +32,14 @@ from HellMusic import app, app2
 
 @app.on_message(filters.command("broadcast") & filters.user(OWNER_ID))
 async def broadcast(_, message: Message):
-    brep = await message.reply_text("sᴛᴀʀᴛᴇᴅ ᴀssɪsᴛᴀɴᴛ ʙʀᴏᴀᴅᴄᴀsᴛ...")
+    brep = await message.reply_text("ѕтαятє∂ αѕѕιѕтαит вяσα∂¢αѕт...")
     if message.reply_to_message:
         x = message.reply_to_message.id
         y = message.chat.id
     else:
         if len(message.command) < 2:
             return await message.reply_text(
-                "**ᴇxᴀᴍᴘʟᴇ:**\n\n/broadcast [ᴍᴇssᴀɢᴇ] ᴏʀ [ʀᴇᴘʟʏ ᴛᴏ ᴀ ᴍᴇssᴀɢᴇ]"
+                "**єχαмρℓє:**\n\n/broadcast [мєѕѕαgє] σя [яєρℓу тσ α мєѕѕαgє]"
             )
         query = message.text.split(None, 1)[1]
     sent = 0
@@ -60,6 +60,6 @@ async def broadcast(_, message: Message):
         except Exception:
             continue
     try:
-        await brep.edit_text(f"**ʙʀᴏᴀᴅᴄᴀsᴛᴇᴅ ᴍᴇssᴀɢᴇ ɪɴ {sent} ᴄʜᴀᴛs.**")
+        await brep.edit_text(f"**вяσα∂¢αтє∂ мєѕѕαgє ιи {sent} ¢нαтѕ.**")
     except:
-        await message.reply_text(f"**ʙʀᴏᴀᴅᴄᴀsᴛᴇᴅ ᴍᴇssᴀɢᴇ ɪɴ {sent} ᴄʜᴀᴛs.**")
+        await message.reply_text(f"**вяσα∂¢αѕтє∂ мєѕѕαgє ιи {sent} ¢нαтѕ.**")
