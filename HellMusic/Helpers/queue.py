@@ -1,6 +1,6 @@
 # MIT License
 #
-# Copyright (c) 2023 MrProgrammer72
+# Copyright (c) 2023 HELL-BOY-OP
 #
 # Permission is hereby granted, free of charge, to any person obtaining a copy
 # of this software and associated documentation files (the "Software"), to deal
@@ -20,7 +20,7 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 # SOFTWARE.
 
-from HellMusic import Helldb
+from HellMusic import helldb
 
 
 async def put(
@@ -40,9 +40,9 @@ async def put(
         "req": ruser,
         "user_id": user_id,
     }
-    get = Helldb.get(chat_id)
+    get = helldb.get(chat_id)
     if get:
-        Helldb[chat_id].append(put_f)
+        helldb[chat_id].append(put_f)
     else:
-        Helldb[chat_id] = []
-        Helldb[chat_id].append(put_f)
+        helldb[chat_id] = []
+        helldb[chat_id].append(put_f)
