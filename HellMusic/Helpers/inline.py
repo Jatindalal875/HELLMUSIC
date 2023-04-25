@@ -51,12 +51,12 @@ pm_buttons = [
     ],
     [InlineKeyboardButton(text="нєℓρ & ¢σммαи∂ѕ", callback_data="hell_help")],
     [
-        InlineKeyboardButton(text="❄ ¢нαт gяσυρ ❄", url=config.SUPPORT_CHANNEL),
-        InlineKeyboardButton(text="✨ sᴜᴩᴩᴏʀᴛ ✨", url=config.SUPPORT_CHAT),
+        InlineKeyboardButton(text="❄ ¢нαииєℓ ❄", url=config.SUPPORT_CHANNEL),
+        InlineKeyboardButton(text="✨ ѕυρρσят ✨", url=config.SUPPORT_CHAT),
     ],
     [
         InlineKeyboardButton(
-            text="☁️ sᴏᴜʀᴄᴇ ☁️", url="https://graph.org/file/83460f247a582d9349f1f.jpg"
+            text="☁️ ѕσυя¢є ☁️", url="https://graph.org/file/83460f247a582d9349f1f.jpg"
         ),
         InlineKeyboardButton(text="😈 ∂єνєℓσρєя 😈", user_id=config.OWNER_ID),
     ],
@@ -71,12 +71,12 @@ gp_buttons = [
         )
     ],
     [
-        InlineKeyboardButton(text="❄ ¢нαт gяσυρ ❄", url=config.SUPPORT_CHANNEL),
-        InlineKeyboardButton(text="✨ sᴜᴩᴩᴏʀᴛ ✨", url=config.SUPPORT_CHAT),
+        InlineKeyboardButton(text="❄ ¢нαииєℓ ❄", url=config.SUPPORT_CHANNEL),
+        InlineKeyboardButton(text="✨ ѕυρρσят ✨", url=config.SUPPORT_CHAT),
     ],
     [
         InlineKeyboardButton(
-            text="☁️ sᴏᴜʀᴄᴇ ☁️", url="https://graph.org/file/83460f247a582d9349f1f.jpg"
+            text="☁️ ѕσυя¢є ☁️", url="https://graph.org/file/83460f247a582d9349f1f.jpg"
         ),
         InlineKeyboardButton(text="😈 ∂єνєℓσρєя 😈", user_id=config.OWNER_ID),
     ],
